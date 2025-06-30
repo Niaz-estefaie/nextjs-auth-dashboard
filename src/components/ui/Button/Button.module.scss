@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-hover;
+    }
+  }
+
+  &.secondary {
+    background-color: $light-color;
+    color: #374151;
+    border: 1px solid #d1d5db;
+
+    &:hover:not(:disabled) {
+      background-color: #e5e7eb;
+    }
+  }
+
+  &.danger {
+    background-color: $error-color;
+    color: white;
+
+    &:hover:not(:disabled) {
+      background-color: #dc2626;
+    }
+  }
+
+  // Sizes
+  &.sm {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+  }
+
+  &.md {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-base;
+  }
+
+  &.lg {
+    padding: $spacing-lg $spacing-xl;
+    font-size: $font-size-lg;
+  }
+}
+
+.loading {
+  @include flex-center;
+}

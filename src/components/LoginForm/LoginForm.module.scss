@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.container {
+  min-height: 100vh;
+  @include flex-center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: $spacing-lg;
+
+  @include mobile {
+    padding: $spacing-md;
+  }
+}
+
+.formCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: $spacing-xxl;
+  width: 100%;
+  max-width: 400px;
+
+  @include mobile {
+    padding: $spacing-xl;
+    border-radius: 8px;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: $spacing-xxl;
+  font-size: $font-size-xxl;
+  font-weight: 600;
+  color: #1f2937;
+
+  @include mobile {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitError {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: $error-color;
+  padding: $spacing-md;
+  border-radius: 6px;
+  margin-bottom: $spacing-lg;
+  font-size: $font-size-sm;
+  text-align: center;
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: $spacing-md;
+}
